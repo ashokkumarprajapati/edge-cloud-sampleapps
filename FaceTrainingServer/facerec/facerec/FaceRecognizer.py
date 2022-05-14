@@ -30,7 +30,7 @@ import shutil
 import redis
 from redis.exceptions import ConnectionError
 
-TRAINING_DATA_HOSTNAME = 'opencv.facetraining.mobiledgex.net'
+TRAINING_DATA_HOSTNAME = 'localhost'
 TRAINING_DATA_DIR = 'facerec/training-data/'
 LAST_UPDATED_TIMESTAMP = 'last_updated_timestamp'
 OWNER_KEY_INDEX = 'owner_key_index'
@@ -48,7 +48,7 @@ class FaceRecognizer(object):
     def __init__(self):
         # Get password from environment variable.
         try:
-            self.redis_server_password = os.environ['REDIS_SERVER_PASSWORD']
+            self.redis_server_password = os.environ.get('REDIS_SERVER_PASSWORD', 'password')
         except (ValueError, KeyError) as e:
             logger.error("Fatal error: REDIS_SERVER_PASSWORD environment variable is not available.")
             sys.exit(1)
@@ -57,7 +57,7 @@ class FaceRecognizer(object):
         self.training_data_filename = 'trained.yml'
         self.training_data_filepath = self.working_dir+"/"+self.training_data_filename
         self.training_data_timestamp = 0
-        self.training_data_hostname = TRAINING_DATA_HOSTNAME
+        self.training_data_hostname = os.environ.get('REDIS_HOST', 'localhost')
         self.redis = None
 
         # If this script is called by manage.py, we don't need to continue with initialization.

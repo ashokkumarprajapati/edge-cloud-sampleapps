@@ -68,6 +68,7 @@ def save_debug_image(image, request, type):
 def get_image_from_request(request, type):
     """ Based on the content type, get the image data from the request. """
     logger.debug("get_image_from_request method=%s content_type=%s" %(request.method, request.content_type))
+    logger.error(request.content_type)
     if request.method != 'POST':
         return False, HttpResponseBadRequest("Must send frame as a POST")
 
@@ -145,10 +146,10 @@ def add(request):
         error = "Missing 'subject' parameter"
         logger.error(error)
         return HttpResponseBadRequest(error)
-    if request.POST.get("image", "") == "":
-        error = "Missing 'image' parameter"
-        logger.error(error)
-        return HttpResponseBadRequest(error)
+    #if request.POST.get("image", "") == "":
+    #    error = "Missing 'image' parameter"
+    #    logger.error(error)
+    #    return HttpResponseBadRequest(error)
 
     if owner_name != subject:
         logger.info("Received guest image for subject '%s' from owner '%s'" %(subject, owner_name))
@@ -287,8 +288,8 @@ def predict(request):
     logger.debug("Request received: %s" %request)
     if request.method != 'POST':
         return HttpResponseBadRequest("Must send frame as a POST")
-    if request.content_type != 'application/x-www-form-urlencoded':
-        return HttpResponseBadRequest("Content-Type must be 'application/x-www-form-urlencoded'")
+    #if request.content_type != 'application/x-www-form-urlencoded':
+    #    return HttpResponseBadRequest("Content-Type must be 'application/x-www-form-urlencoded'")
 
     ret, image = get_image_from_request(request, "face")
     if not ret:
