@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Trainer Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
       * {
@@ -29,7 +30,7 @@
         text-align: center;
       }
       .container {
-        max-width: 400px;
+        max-width: 500px;
         width: 100%;
         margin: 0 auto;
         position: relative;
@@ -156,69 +157,10 @@
     <div class="container">
       <div class="formbox">
         <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 10px">
-          <?xml version="1.0" encoding="utf-8"?><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="183.5"
-            height="41"
-            viewBox="0 0 183.5 41"
-          >
-            <g transform="translate(-8.5 -645.7)">
-              <g transform="translate(9 646.2)">
-                <path
-                  class="a"
-                  d="M28.767,686.2a20,20,0,1,1,19.9-20.228v.638l-17.9.228v-1.276l16.631-.228a18.577,18.577,0,1,0-18.631,19.59c7.725,0,12.5-2.278,15.359-7.471l.545-1.094L39.9,673.99c-2.317,3.736-6.271,5.786-11.179,5.786a13.577,13.577,0,0,1,0-27.153,13.322,13.322,0,0,1,9.5,3.964l-.909.911a12.057,12.057,0,0,0-8.588-3.6,12.3,12.3,0,0,0,0,24.6c4.635,0,8.316-2,10.361-5.649l.273-.547,7,3.508-1.136,2.232C42.127,683.6,36.9,686.2,28.767,686.2Z"
-                  transform="translate(-9 -646.2)"
-                />
-                <g transform="translate(15.95 15.899)">
-                  <path
-                    class="b"
-                    d="M52.416,685.245a4.158,4.158,0,1,1-4.135-4.146,4.126,4.126,0,0,1,4.135,4.146"
-                    transform="translate(-44.1 -681.098)"
-                  />
-                </g>
-              </g>
-              <g transform="translate(56.85 656.554)">
-                <path
-                  class="c"
-                  d="M129.2,670.917a8.585,8.585,0,0,1,3.061,4.937h-3.939a5.171,5.171,0,0,0-1.9-2.4,5.372,5.372,0,0,0-3.1-.88,4.9,4.9,0,0,0-4.551,2.882,8.226,8.226,0,0,0,0,6.484,4.9,4.9,0,0,0,4.551,2.882,5.372,5.372,0,0,0,3.1-.88,5.171,5.171,0,0,0,1.9-2.4h3.939a8.581,8.581,0,0,1-3.061,4.936,10.1,10.1,0,0,1-10.579.6,8.256,8.256,0,0,1-3.194-3.4,11.514,11.514,0,0,1,0-9.953,8.288,8.288,0,0,1,3.18-3.4,10.127,10.127,0,0,1,10.593.6Z"
-                  transform="translate(-114.3 -669.022)"
-                />
-                <path
-                  class="c"
-                  d="M177.32,670.154a8.893,8.893,0,0,1,3.38,3.429,10.65,10.65,0,0,1,0,9.966,8.863,8.863,0,0,1-3.38,3.443,9.912,9.912,0,0,1-9.555,0,8.863,8.863,0,0,1-3.38-3.443,10.649,10.649,0,0,1,0-9.966,8.893,8.893,0,0,1,3.38-3.429,9.912,9.912,0,0,1,9.555,0Zm-7.679,2.989a5.107,5.107,0,0,0-1.956,2.148,7.928,7.928,0,0,0,0,6.538,5.107,5.107,0,0,0,1.956,2.148,6.009,6.009,0,0,0,5.8,0,5.111,5.111,0,0,0,1.956-2.148,7.924,7.924,0,0,0,0-6.538,5.111,5.111,0,0,0-1.956-2.148,6.006,6.006,0,0,0-5.8,0Z"
-                  transform="translate(-140.95 -668.927)"
-                />
-                <path
-                  class="c"
-                  d="M224.894,688.351l-4.392-7.338h-1.65v7.338H215.1V669.513h7.16a7.059,7.059,0,0,1,4.99,1.6,6.016,6.016,0,0,1,.532,7.792,5.842,5.842,0,0,1-3.42,1.922l4.684,7.524Zm-6.042-9.926h3.087q3.22,0,3.22-2.855a2.818,2.818,0,0,0-.785-2.122,3.391,3.391,0,0,0-2.435-.76h-3.087Z"
-                  transform="translate(-169.295 -669.246)"
-                />
-                <path
-                  class="c"
-                  d="M259.324,672.5v4.883h6.654v2.882h-6.654v5.07h7.453v3.015H255.571V669.513h11.205V672.5Z"
-                  transform="translate(-191.376 -669.246)"
-                />
-                <path
-                  class="c"
-                  d="M306.069,683.842a8.164,8.164,0,0,1-3.394,3.322,11.06,11.06,0,0,1-5.283,1.187h-6.681V669.513h6.681a11.267,11.267,0,0,1,5.283,1.161,8.021,8.021,0,0,1,3.394,3.282,11.018,11.018,0,0,1,0,9.886Zm-4.3-.454a6.91,6.91,0,0,0,0-8.993,6.5,6.5,0,0,0-4.7-1.6h-2.608v12.194h2.608A6.5,6.5,0,0,0,301.771,683.388Z"
-                  transform="translate(-210.548 -669.246)"
-                />
-                <path
-                  class="c"
-                  d="M351.382,670.8a7.566,7.566,0,0,1,2.9,4.576h-3.939a4.485,4.485,0,0,0-1.77-2.041,5.268,5.268,0,0,0-2.861-.76,5.5,5.5,0,0,0-2.875.747,5.043,5.043,0,0,0-1.943,2.135,7.206,7.206,0,0,0-.692,3.255,6.4,6.4,0,0,0,1.583,4.616,5.7,5.7,0,0,0,4.325,1.655,5.273,5.273,0,0,0,3.473-1.2,5.581,5.581,0,0,0,1.877-3.335H345.1v-2.7h9.5v3.629a8.886,8.886,0,0,1-1.557,3.442,8.368,8.368,0,0,1-3.034,2.522,9.418,9.418,0,0,1-4.3.947,9.637,9.637,0,0,1-4.884-1.214,8.35,8.35,0,0,1-3.274-3.389,11.273,11.273,0,0,1,0-9.953,8.462,8.462,0,0,1,3.26-3.4,9.484,9.484,0,0,1,4.871-1.228A9.242,9.242,0,0,1,351.382,670.8Z"
-                  transform="translate(-235.474 -669.022)"
-                />
-                <path
-                  class="c"
-                  d="M390.813,672.5v4.883h6.654v2.882h-6.654v5.07h7.452v3.015H387.06V669.513h11.205V672.5Z"
-                  transform="translate(-263.115 -669.246)"
-                />
-              </g>
-            </g>
-          </svg>
+          <h1 class="text-center">Face Detection & Predection System</h1>
         </div>
         <form id="contact" action="" method="post">
-          <h4 class="text-center">Predict Form</h4>
+          <h4 class="text-center"><b>Predict subject based on photo</b></h4>
           <fieldset>
             <label style="display: block" for="image">Upload Image: </label>
             <!--  change accept attribute if you want to accept different types -->
@@ -232,23 +174,28 @@
             />
           </fieldset>
           <fieldset>
-            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Predict Subject</button>
           </fieldset>
           <p class="copyright">
-            More info on <a href="https://coredge.io/" target="_blank" title="Coredge">Coredge.io</a>
+           Start uploading photos for more subjects <a href="#"  id="action_link" title="Train">here</a>
           </p>
         </form>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("action_link").href = host_url = window.location.pathname.split("static")[0] + "static/index.html";
         document.querySelector("#contact").addEventListener("submit", function (event) {
           var data = this;
           var method = data.getAttribute("method") || "POST";
           // the input name attirbute will be taken here
           var sendData = new FormData(data);
           // change API endpoint here
-          fetch("/trainer/predict/", {
+          host_url = window.location.pathname.split("static")[0];
+          endpoint = host_url+"predict/"
+          fetch(endpoint, {
             method: method,
             body: sendData,
           })
@@ -256,9 +203,37 @@
             .then(function (data) {
               // once the form gets submitted, it can be redirected or we can show up an alert box;
               if(data.success == "true"){
-                alert("I can say with " + data.confidence + " that photo belongs to :" + data.subject);
+                $.confirm({
+                    title: 'Subject Identified!',
+                    content: 'Subject is identified as: ' + data.subject + "<br>Confidence level:" + data.confidence,
+                    type: 'green',
+                    typeAnimated: true,
+                    buttons: {
+                        ok: {
+                            text: 'Ok',
+                            btnClass: 'btn-green',
+                            action: function(){
+                            }
+                        }
+                    }
+                });
               }else{
-                alert("Cannot identify subject.");
+                $.confirm({
+                  title: 'Cannot Identify Subject!',
+                  content: 'Cannot identify subject. Make sure that photos are added and system is trained.',
+                  type: 'red',
+                  typeAnimated: true,
+                  buttons: {
+                      tryAgain: {
+                          text: 'Try again',
+                          btnClass: 'btn-red',
+                          action: function(){
+                          }
+                      },
+                      close: function () {
+                      }
+                  }
+                });
               }
               // Rest form fields
               document.getElementById("contact").reset();
