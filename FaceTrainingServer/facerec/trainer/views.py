@@ -34,7 +34,7 @@ logger = logging.getLogger(__name__)
 
 @csrf_exempt
 def index(request):
-    return HttpResponse("Hello, world. You're at the trainer index.")
+    return render(request, 'index.html', {})
 
 @csrf_exempt
 def test_connection(request):
